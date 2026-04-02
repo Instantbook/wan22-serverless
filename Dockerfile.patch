@@ -1,0 +1,6 @@
+FROM dbazos/wan22-serverless:v7
+
+# Override handler with fixes
+COPY handler.py /workspace/handler.py
+
+CMD ["python", "-u", "/workspace/handler.py"]
